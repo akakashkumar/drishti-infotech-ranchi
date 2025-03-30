@@ -34,7 +34,7 @@ export default function Header() {
                 <RxHamburgerMenu className="text-2xl  lg:hidden"/>
                 {navItem.map((e,i)=>{
                     return(
-                        <li className="hidden lg:block"><Link href={e.path}>{e.name}</Link></li>
+                        <li className="hidden lg:block" key={i}><Link href={e.path}>{e.name}</Link></li>
                     )
                 })}
                 </ul>
