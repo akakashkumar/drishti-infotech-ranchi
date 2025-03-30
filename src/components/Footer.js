@@ -100,7 +100,7 @@ export default function Footer() {
                 {
                     courses.map((e,i)=>{
                         return(
-                            <li className="text-gray-300" key={i}><Link href={`/courses/${e.path}`}>{e.item}</Link></li>
+                            <li className="text-gray-300 text-light" key={i}><Link href={`/courses/${e.path}`}>{e.item}</Link></li>
                         )
                     })
                 }
