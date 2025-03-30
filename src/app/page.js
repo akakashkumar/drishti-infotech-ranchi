@@ -1,4 +1,5 @@
 "use client";
+import LocomotiveScroll from 'locomotive-scroll';
 
 import PopularCourses from "@/components/PopularCourses";
 
@@ -6,7 +7,7 @@ import PopularCourses from "@/components/PopularCourses";
 
 
 export default function Home() {
-
+  const scroll = new LocomotiveScroll();
   return (
     <div>
       <div className="conatiner mx-auto px-4 lg:px-5 py-5">
