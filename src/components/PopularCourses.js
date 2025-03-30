@@ -42,7 +42,7 @@ export default function PopularCourses() {
   return (
     <div>
       <div className="container mx-auto px-5 py-5">
-        <h2 className="text-4xl font-medium">Popular Courses</h2>
+        <h2 className="lg:text-4xl md:text-2xl font-medium">Popular Courses</h2>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {courseCard.map((e, i) => {
             return (
