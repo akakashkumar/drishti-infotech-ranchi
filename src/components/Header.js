@@ -28,7 +28,7 @@ export default function Header() {
       ]);
     return(
         <div>
-            <div className="container mx-auto px-5 py-5 flex justify-between items-center">
+            <div className="container mx-auto px-4 lg:px-5 py-5 flex justify-between items-center">
                 <Link href="/"><h2 className="text-sm lg:text-2xl ">Drishti Infotech</h2></Link>
                 <ul className="flex gap-7 items-center">
                 <RxHamburgerMenu className="text-2xl  lg:hidden"/>
