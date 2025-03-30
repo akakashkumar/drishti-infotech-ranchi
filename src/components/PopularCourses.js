@@ -42,11 +42,11 @@ export default function PopularCourses() {
   return (
     <div>
       <div className="container mx-auto px-4 lg:px-5 py-5">
-        <h2 className="lg:text-4xl md:text-2xl font-medium">Popular Courses</h2>
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <h2 className="lg:text-4xl md:text-2xl font-medium mb-5 mt-10">Popular Courses</h2>
+        <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">
           {courseCard.map((e, i) => {
             return (
-              <div className=" border rounded mt-5">
+              <div className=" border rounded">
                 <img
                   className="min-w-[200px] h-[150px] border rounded  "
                   src={e.pic}
