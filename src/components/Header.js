@@ -14,6 +14,10 @@ export default function Header() {
           path: "/courses",
         },
         {
+          name:"gallery",
+          path: '/gallery'
+        },
+        {
           name: "Services",
           path: "/services",
         },
