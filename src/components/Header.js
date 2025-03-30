@@ -33,8 +33,8 @@ export default function Header() {
     setIsClick(!isClick);
   };
   return (
-    <header className="h-16">
-      <nav className="container bg-white mx-auto px-4 fixed top-0 lg:px-5 py-2 pt-5 flex justify-between lg:items-center">
+    <header className=" bg-white">
+      <nav className="container bg-white mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between lg:items-center">
         <Link href="/">
           <h2 className="text-sm lg:text-2xl text-blue-800 ">
             Drishti Infotech
