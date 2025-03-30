@@ -51,6 +51,7 @@ export default function PopularCourses() {
     <div>
       <div className="container mx-auto px-4 lg:px-5 py-5">
         <h2 className="lg:text-4xl md:text-2xl font-medium mb-5 mt-10">Popular Courses</h2>
+        <Link href='/courses'><button className="text-2xl text-blue-500 cursor-pointer underline mb-5">See All Courses</button></Link>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">
           {courseCard.map((e, i) => {
             return (
