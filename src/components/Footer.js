@@ -55,7 +55,7 @@ export default function Footer() {
         path: "/c",
     },
     {
-        item: "c++",
+        item: "C++",
         path: "/c++",
     },
     {
