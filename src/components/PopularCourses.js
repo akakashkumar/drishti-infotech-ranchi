@@ -34,12 +34,7 @@ export default function PopularCourses() {
       duration: "3 Months",
       path:"hindi-english-typing"
     },
-    {
-      pic: "web-dev.jpg",
-      name: "Web Development",
-      duration: "6 Months",
-      path:"web-development"
-    },
+    
     {
       pic: "graphic-designing.jpg",
       name: "Graphic Designing",
@@ -51,6 +46,12 @@ export default function PopularCourses() {
       name: "Video Editing",
       duration: "3 Months",
       path:"video-editing"
+    },
+    {
+      pic: "web-dev.jpg",
+      name: "Web Development",
+      duration: "6 Months",
+      path:"web-development"
     },
   ]);
 

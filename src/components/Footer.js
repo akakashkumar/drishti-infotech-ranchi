@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function Footer() {
   const [quickLinks, setQuickLinks] = useState([
@@ -73,6 +76,18 @@ export default function Footer() {
    
 
   ])
+  const [contactDetail, setContactDetail] = useState([{
+    icon: <FaPhoneAlt />,
+    item: '7488207829, 7979735081'
+  },
+  {
+    icon: <MdEmail/>,
+    item:'drishtiinfotech@gmail.com'
+  } ,
+  {
+    icon: <FaLocationDot />,
+    item: 'Tilta Chock, Kamre Ranchi Jharkhand-835222'
+  } ])
   return (
     <div className="bg-[#1c2331]">
       <footer className="container mx-auto px-4 lg:px-5 py-5">
@@ -105,10 +120,12 @@ export default function Footer() {
         </div>
         <div>
             <h2 className="text-2xl text-orange-500 font-medium">Contact Us</h2>
-            <ul className="text-gray-300 font-light">
-                <li>Phone no</li>
-                <li>Email</li>
-                <li>Add</li>
+            <ul className="">
+                {contactDetail.map((e,i)=>{
+                  return(<li className="text-gray-300 font-light flex items-center gap-1" key={i}>{e.icon}
+                  <p>{e.item}</p>
+                  </li>)
+                })}
             </ul>
         </div>
         <div>
