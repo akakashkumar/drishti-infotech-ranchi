@@ -4,43 +4,50 @@ import { useState } from "react";
 export default function PopularCourses() {
   const [courseCard, setCourseCard] = useState([
     {
-      pic: "https://www.stpcomputereducation.com/images/course_pic/basic.webp",
+      pic: "dca.jpg",
       name: "DCA",
       duration: "3 Months",
       path:"dca"
     },
     {
-      pic: "https://www.stpcomputereducation.com/images/course_pic/basic.webp",
+      pic: "tally.jpg",
       name: "Tally",
       duration: "3 Months",
       path:"tally"
     },
     {
-      pic: "https://www.stpcomputereducation.com/images/course_pic/basic.webp",
+      pic: "dtp.jpg",
       name: "DTP",
       duration: "4 Months",
       path:"dtp"
     },
+    
     {
-      pic: "https://www.stpcomputereducation.com/images/course_pic/basic.webp",
+      pic: "adca.jpg",
       name: "ADCA",
       duration: "12 Months",
       path:"adca"
     },
     {
-      pic: "https://www.stpcomputereducation.com/images/course_pic/basic.webp",
+      pic: "hi-en-typing.jpg",
+      name: "Hindi & English Typing",
+      duration: "3 Months",
+      path:"hindi-english-typing"
+    },
+    {
+      pic: "web-dev.jpg",
       name: "Web Development",
       duration: "6 Months",
       path:"web-development"
     },
     {
-      pic: "https://www.stpcomputereducation.com/images/course_pic/basic.webp",
+      pic: "graphic-designing.jpg",
       name: "Graphic Designing",
       duration: "4 Months",
       path:"graphic-designing"
     },
     {
-      pic: "https://www.stpcomputereducation.com/images/course_pic/basic.webp",
+      pic: "video-editing.jpg",
       name: "Video Editing",
       duration: "3 Months",
       path:"video-editing"

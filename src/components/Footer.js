@@ -43,6 +43,10 @@ export default function Footer() {
         path: "/adca",
     },
     {
+      item: "Hindi & English Typing",
+      path: "/hindi-english-typing",
+  },
+    {
         item: "Graphic Designing",
         path: "/graphic-designing",
     },
@@ -66,14 +70,7 @@ export default function Footer() {
         item: "Web Development",
         path: "/web-development",
     },
-    {
-        item: "Frontend Development",
-        path: "/frontend-development",
-    },
-    {
-        item: "Backend Development",
-        path: "/backend-development",
-    },
+   
 
   ])
   return (
