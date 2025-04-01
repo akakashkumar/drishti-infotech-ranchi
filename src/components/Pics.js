@@ -7,7 +7,7 @@ export default function Gallery(){
             <div className="conatiner mx-auto px-4 py-5 grid grid-cols-4 gap-4 ">
                 {pics.map((e, i)=>{
                     return(
-                        <img className="max-w-full rounded" src={e} alt="" />
+                        <img className=" rounded" src={e} alt="" />
                     )
                 })}
             </div>

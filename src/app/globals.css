@@ -1,3 +1,20 @@
 @import "tailwindcss";
+@font-face {
+    font-family: "fontspring";
+    src: url('../../public/Fontspring-DEMO-juana-extralightit_toKzXEsfr.ttf');
+}
+@font-face {
+    font-family: "MachinaR";
+    src: url('../../public/NeueMachina-Regular_DQCmjH1st.ttf');
+}
+@font-face {
+    font-family: "MachinaL";
+    src: url('../../public/NeueMachina-Light_gwWCZxVuQl.ttf');
+}
+@font-face {
+    font-family: "MachinaB";
+    src: url('../../public/NeueMachina-Bold_WaMOsLX9Z9.ttf');
+}
+
 
 
