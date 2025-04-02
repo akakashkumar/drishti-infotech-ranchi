@@ -99,7 +99,7 @@ export default function About() {
             <h1 className="text-3xl text-orange-500 font-[MachinaR] text-center lg:text-left uppercase font-[MachinaR]">
             About Drishti Infotech
           </h1>
-            <p className="my-2 text-xl ">
+            <p className="my-2 text-xl text-center lg:text-left">
             In Ranchi, Jharkhand, where opportunities in the IT and related
             sectors are growing, computer coaching centers play a crucial role
             in empowering the local population with the skills needed to
@@ -143,7 +143,7 @@ export default function About() {
           </div>
 
           <h5 className="mt-10 mb-5 text-2xl font-medium">
-            Benefits of Computer Coaching:
+            Benefits of Computer Coaching
           </h5>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {benefits.map((e, i) => {

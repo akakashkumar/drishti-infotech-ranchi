@@ -17,7 +17,7 @@ export const metadata = {
   title: "Drishti Infotech",
   description: "A Computer Institute",
   
-  keywords: ['Drishti Infotech', 'Drishti Infotech Ranchi', 'Computer Institute in Kamre','Computer Institute in Tilta', 'DCA', 'Tally', 'DTP','Photoshop','Graphic Designing','Web Development',]
+  keywords: ['drishti infotech', 'drishti infotech ranchi', 'computer institute in kamre','computer institute in tilta', 'dca', 'tally', 'dtp','photoshop','graphic designing','web development',]
   
 };
 
