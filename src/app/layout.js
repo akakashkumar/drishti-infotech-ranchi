@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Drishti Infotech",
   description: "A Computer Institute",
+  
+  keywords: ['Drishti Infotech', 'Drishti Infotech Ranchi', 'Computer Institute in Kamre','Computer Institute in Tilta', 'DCA', 'Tally', 'DTP','Photoshop','Graphic Designing','Web Development',]
+  
 };
 
 export default function RootLayout({ children }) {
