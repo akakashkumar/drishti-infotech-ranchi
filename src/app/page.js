@@ -2,6 +2,7 @@
 
 
 import PopularCourses from "@/components/PopularCourses";
+import Vision from "@/components/Vision";
 
 
 
@@ -22,6 +23,7 @@ export default function Home() {
         </div>
         
         <PopularCourses />
+        <Vision/>
       </div>
     </div>
   );

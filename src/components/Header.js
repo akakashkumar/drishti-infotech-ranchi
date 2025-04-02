@@ -36,14 +36,14 @@ export default function Header() {
     <header className=" bg-white">
       <nav className="container bg-white mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between lg:items-center">
         <Link href="/">
-          <h2 className="text-sm lg:text-2xl text-blue-800 ">
+          <h2 className="text-sm lg:text-2xl font-[MachinaR] text-blue-800 ">
             Drishti Infotech
           </h2>
         </Link>
         <ul className="flex gap-7 items-center">
           {navItem.map((e, i) => {
             return (
-              <li className={`hidden lg:block`} key={i}>
+              <li className='hidden lg:block text-lg' key={i}>
                 <Link href={e.path}>{e.name}</Link>
               </li>
             );

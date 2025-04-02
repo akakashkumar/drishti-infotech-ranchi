@@ -4,6 +4,9 @@ import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   const [quickLinks, setQuickLinks] = useState([
@@ -88,6 +91,23 @@ export default function Footer() {
     icon: <FaLocationDot />,
     item: 'Tilta Chock, Kamre Ranchi Jharkhand-835222'
   } ])
+  const [socialLinks, setSocialLinks] = useState([
+    {
+      item: 'Instagram',
+      icon: <FaInstagram/>,
+      path: ''
+    },
+    {
+      item: 'Facebook',
+      icon: <FaFacebook/>,
+      path: ''
+    },
+    {
+      item: 'Youtube',
+      icon: <FaYoutube/>,
+      path: ''
+    },
+  ])
   return (
     <div className="bg-[#1c2331]">
       <footer className="container mx-auto px-4 lg:px-5 py-5">
@@ -130,10 +150,13 @@ export default function Footer() {
         </div>
         <div>
             <h2 className="text-2xl text-orange-500 font-medium">Social Media Links</h2>
-            <ul className="text-gray-300 font-light">
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>youtube</li>
+            <ul className="text-gray-300 font-light  mt-3  ">
+                {socialLinks.map((e,i)=>{
+                  return(
+                    <li className="flex items-center gap-1 text-xl" key={i}>{e.icon}<Link href={e.path}>{e.item}</Link></li>
+                  )
+                })}
+              
             </ul>
         </div>
        </div>

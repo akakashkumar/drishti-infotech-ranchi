@@ -57,7 +57,7 @@ export default function AllCourses() {
             pic: "c++.jpg",
             name: "C++",
             duration: "3-4 Months",
-            path:"c++"
+            path:"cpp"
           },
           {
             pic: "python.jpg",
@@ -82,7 +82,7 @@ export default function AllCourses() {
   return (
     <div>
       <div className="container mx-auto px-4 py-5 lg:px-5">
-        <h2 className="text-xl font-medium mb-4 mt-4 text-green-500">Our All Courses</h2>
+        <h2 className="text-3xl font-[MachinaR] font-medium mb-4 mt-4 text-orange-500">Our All Courses</h2>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">
           {allCourses.map((e, i) => {
             return (
