@@ -11,6 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ModeToggle } from "./theme-btn";
 
 export default function Header() {
   const [navItem, setNavItem] = useState([
@@ -41,8 +42,8 @@ export default function Header() {
     setIsClick(!isClick);
   };
   return (
-    <header className=" bg-white">
-      <nav className="max-w-7xl bg-white sticky top-0 left-0 mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between lg:items-center">
+    <header className=" ">
+      <nav className="max-w-7xl  sticky top-0 left-0 mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between lg:items-center">
         <Link href="/">
           <h2 className="text-sm lg:text-2xl font-[MachinaR] text-blue-800 ">
             Drishti Infotech
@@ -56,29 +57,38 @@ export default function Header() {
               </li>
             );
           })}
-          <div>
-           
-          </div>
+          <li className="hidden lg:block">
+            <ModeToggle />
+          </li>
         </ul>
-     <div className="lg:hidden">
-     <Sheet>
-          <SheetTrigger><RxHamburgerMenu className="text-xl sm:text-2xl" /></SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Drishti Infotech</SheetTitle>
-              <SheetDescription>
-                <ul>
-                {navItem.map((e, i) => {
-                  return(
-                    <li><Link href={e.path}>{e.name}</Link></li>
-                  )
-                })}
-                </ul>
-              </SheetDescription>
-            </SheetHeader>
-          </SheetContent>
-        </Sheet>
-     </div>
+        <div className="lg:hidden">
+          <Sheet>
+          <div className="flex gap-4 items-center">
+          <div className="lg:hidden">
+              <ModeToggle/>
+            </div>
+            <SheetTrigger>
+              <RxHamburgerMenu className="text-3xl sm:text-4xl" />
+            </SheetTrigger>
+          </div>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Drishti Infotech</SheetTitle>
+                <SheetDescription>
+                  <ul>
+                    {navItem.map((e, i) => {
+                      return (
+                        <li>
+                          <Link href={e.path}>{e.name}</Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </div>
       </nav>
     </header>
   );
