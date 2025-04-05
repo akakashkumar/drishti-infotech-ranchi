@@ -46,10 +46,8 @@ export default function Header() {
       path: "/contact",
     },
   ]);
-  const [isClick, setIsClick] = useState(false);
-  const toggle = () => {
-    setIsClick(!isClick);
-  };
+  const [open, setOpen] = useState(false);
+ 
   return (
     <header className=" ">
      
@@ -73,7 +71,7 @@ export default function Header() {
           </li>
         </ul>
         <div className="lg:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
           <div className="flex gap-4 items-center">
           <div className="lg:hidden">
               <ModeToggle/>
@@ -83,15 +81,14 @@ export default function Header() {
 
             </SheetTrigger>
           </div>
-            <SheetContent className='p-6'>
-              <SheetHeader>
-                <SheetTitle>Drishti Infotech</SheetTitle>
-                
-              </SheetHeader>
+            <SheetContent className='p-5'>
+             
               <ul>
                     {navItem.map((e, i) => {
                       return (
-                        <li key={i}>
+                        <li className="m-2" key={i} onClick={()=>{
+                          setOpen(false)
+                        }}>
                           <Link href={e.path}>{e.name}</Link>
                         </li>
                       );
