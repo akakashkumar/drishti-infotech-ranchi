@@ -1,4 +1,12 @@
 import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function About() {
   const [coreFocus, setCoreFocus] = useState([
@@ -89,39 +97,46 @@ export default function About() {
   ]);
   return (
     <div>
-      <div className="container mx-auto px-4 py-5">
+      <div className="">
         <img className="w-full" src="banner.webp" alt="banner" />
         <div className="py-5">
-         
-          
           <div className="lg:flex items-center gap-5">
             <div className="lg:w-1/2">
-            <h1 className="text-3xl text-orange-500 font-[MachinaR] text-center lg:text-left uppercase font-[MachinaR]">
-            About Drishti Infotech
-          </h1>
-            <p className="my-2 text-xl text-center lg:text-left">
-            In Ranchi, Jharkhand, where opportunities in the IT and related
-            sectors are growing, computer coaching centers play a crucial role
-            in empowering the local population with the skills needed to
-            participate in and benefit from the digital economy. They cater to a
-            diverse range of individuals, from students seeking foundational
-            knowledge to professionals looking to upskill or change careers.
-          </p>
+              <h1 className="text-3xl text-orange-500 font-[MachinaR] text-center lg:text-left uppercase font-[MachinaR]">
+                About Drishti Infotech
+              </h1>
+              <p className="my-2 text-xl text-center lg:text-left">
+                In Ranchi, Jharkhand, where opportunities in the IT and related
+                sectors are growing, computer coaching centers play a crucial
+                role in empowering the local population with the skills needed
+                to participate in and benefit from the digital economy. They
+                cater to a diverse range of individuals, from students seeking
+                foundational knowledge to professionals looking to upskill or
+                change careers.
+              </p>
             </div>
             <div className="lg:w-1/2">
-              <img className="w-full rounded" src="banner.webp" alt="about banner" />
+              <img
+                className="w-full rounded"
+                src="banner.webp"
+                alt="about banner"
+              />
             </div>
           </div>
           <h2 className="mb-5 mt-10 text-2xl font-medium">Core Focus</h2>
+
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4">
             {coreFocus.map((e, i) => {
               return (
-                <div className="border rounded  p-4">
-                  <h6 className="text-2xl mb-2 text-center font-medium">
-                    {e.title}
-                  </h6>
-                  <p className="text-center">{e.des}</p>
-                </div>
+               
+                  <Card key={i}>
+                    <CardHeader>
+                      <CardTitle >{e.title}</CardTitle>
+                      <CardDescription>{e.des}</CardDescription>
+                    </CardHeader>
+                   
+                  </Card>
+                
               );
             })}
           </div>
@@ -132,12 +147,13 @@ export default function About() {
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {commonOffering.map((e, i) => {
               return (
-                <div className="border rounded  p-4">
-                  <h6 className="text-2xl mb-2 text-center font-medium">
-                    {e.title}
-                  </h6>
-                  <p className="text-center">{e.des}</p>
-                </div>
+                <Card key={i}>
+                <CardHeader>
+                  <CardTitle >{e.title}</CardTitle>
+                  <CardDescription>{e.des}</CardDescription>
+                </CardHeader>
+               
+              </Card>
               );
             })}
           </div>
@@ -148,12 +164,13 @@ export default function About() {
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {benefits.map((e, i) => {
               return (
-                <div className="border rounded  p-4">
-                  <h6 className="text-2xl mb-2 text-center font-medium">
-                    {e.title}
-                  </h6>
-                  <p className="text-center">{e.des}</p>
-                </div>
+                <Card key={i}>
+                <CardHeader>
+                  <CardTitle >{e.title}</CardTitle>
+                  <CardDescription>{e.des}</CardDescription>
+                </CardHeader>
+               
+              </Card>
               );
             })}
           </div>

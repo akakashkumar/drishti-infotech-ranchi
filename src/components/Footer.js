@@ -110,7 +110,7 @@ export default function Footer() {
   ])
   return (
     <div className="bg-[#1c2331]">
-      <footer className="container mx-auto px-4 lg:px-5 py-5">
+      <footer className="max-w-7xl mx-auto px-4 lg:px-5 py-5">
        <div className="grid md:grid-cols-2 gap-5 lg:grid-cols-4">
        <div>
           <h2 className="text-2xl font-medium text-orange-500 ">

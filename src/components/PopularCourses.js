@@ -1,78 +1,93 @@
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "./ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+
 
 export default function PopularCourses() {
   const [courseCard, setCourseCard] = useState([
     {
-      pic: "dca.jpg",
+      pic: "https://imgs.search.brave.com/EeP2x-3fQkebbnqEkCMbhBkG2tUkkzqz7MFg4CD5H1Y/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9rcmlz/aG5hZ3VydWt1bC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDgvZGNhLWRp/cGxvbWEtaW4tY29t/cHV0ZXItYXBwbGlj/YXRpb24tY291cnNl/LmpwZw",
       name: "DCA",
-      duration: "3 Months",
-      path:"dca"
+      duration: "Duration : 3 Months",
+      path: "dca",
     },
     {
-      pic: "tally.jpg",
+      pic: "https://imgs.search.brave.com/gTsQWHYKv2vEHruPCTznBqFYU72McJierAjlHcGLqKo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/YXNzZXRzLmxldmVy/YWdlZWR1LmNvbS9t/ZWRpYS91cGxvYWRz/LzIwMjQvMTIvMDcx/MTI0MTAvVGFsbHkt/Q291cnNlLTEtODAw/eDUwMC5qcGc",
       name: "Tally",
-      duration: "3 Months",
-      path:"tally"
+      duration: "Duration : 3 Months",
+      path: "tally",
     },
     {
-      pic: "dtp.jpg",
+      pic: "https://imgs.search.brave.com/51fGyicSBtBAUe01bUjp5pAlP93kBOZQ3zKY_-QHHbg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/YXNzZXRzLmxldmVy/YWdlZWR1LmNvbS9i/bG9nL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzEyLzIxMjAw/MDI3L0RUUC1Db3Vy/c2VzLTEtODAweDUw/MC5wbmc",
       name: "DTP",
-      duration: "4 Months",
-      path:"dtp"
+      duration: "Duration : 4 Months",
+      path: "dtp",
     },
-    
+
     {
-      pic: "adca.jpg",
+      pic: "https://imgs.search.brave.com/6chDcEvigxjbeJJDlSLLXaXsaUjOlpOKRS456E_CZPo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzVhLzUx/LzNkLzVhNTEzZDMz/NjkxZjZhODUxMmEx/OTI0ZjczZjBhYjg1/LmpwZw",
       name: "ADCA",
-      duration: "12 Months",
-      path:"adca"
+      duration: "Duration : 12 Months",
+      path: "adca",
     },
     {
-      pic: "hi-en-typing.jpg",
+      pic: "https://imgs.search.brave.com/gzGVReMlaYQ8VcEwAQ0LPqlQKAtZCf4oMF2N92z1XTw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tYWhl/c2h0eXBpbmd0dXRv/ci5jb20vaW1nL21h/bmdhbC10eXBpbmct/c2hvcnRjdXQta2V5/LnBuZw",
       name: "Hindi & English Typing",
-      duration: "3 Months",
-      path:"hindi-english-typing"
+      duration: "Duration : 3 Months",
+      path: "hindi-english-typing",
     },
-    
+
     {
-      pic: "graphic-designing.jpg",
+      pic: "https://imgs.search.brave.com/Md0-zjqRZC5JFYqWQoxtWs-hlkVKGqNgzFKYBjrvFs0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jb3Vy/c2VzLmlpZC5vcmcu/aW4vcHVibGljLy91/cGxvYWRzL21lZGlh/X21hbmFnZXIvNjIx/LmpwZw",
       name: "Graphic Designing",
-      duration: "4 Months",
-      path:"graphic-designing"
+      duration: "Duration : 4 Months",
+      path: "graphic-designing",
     },
     {
-      pic: "video-editing.jpg",
+      pic: "https://imgs.search.brave.com/hT6WWYFsRF2mZw0BaKtonh1a2iIM_qc0_qmsRmDek_M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y3JlYXRpdmVpdGlu/c3RpdHV0ZS5jb20v/aW1hZ2VzL2NvdXJz/ZS9jb3Vyc2VfMTY2/ODQ4ODA2Ni5qcGc",
       name: "Video Editing",
-      duration: "3 Months",
-      path:"video-editing"
-    },
-    {
-      pic: "web-dev.jpg",
-      name: "Web Development",
-      duration: "6 Months",
-      path:"web-development"
+      duration: "Duration : 3 Months",
+      path: "video-editing",
     },
   ]);
 
   return (
     <div>
       <div className="container mx-auto px-4 lg:px-5 py-5">
-        <h2 className="lg:text-4xl md:text-2xl font-medium mb-5 mt-10">Popular Courses</h2>
-        <Link href='/courses'><button className="text-2xl text-blue-500 cursor-pointer underline font-[MachinaR] mb-5">Explore your Courses</button></Link>
+        <h2 className="lg:text-4xl md:text-2xl font-medium mb-5 mt-10">
+          Popular Courses
+        </h2>
+        <Link href="/courses">
+          <button className="text-2xl text-blue-500 cursor-pointer underline font-[MachinaR] mb-5">
+            Explore your Courses
+          </button>
+        </Link>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">
           {courseCard.map((e, i) => {
             return (
-              <div className=" border rounded" key={i}>
-                <img
-                  className="w-full h-[170px] border rounded  "
-                  src={e.pic}
-                  alt={e.name}
-                />
-                <h4 className="mt-3 text-xl ms-2 font-medium">{e.name}</h4>
-                <h5 className="text-sm text-slate-500 ms-2 mb-2">{e.duration}</h5>
-                <Link href={`/courses/${e.path}`}><button className="px-2 py-1  text-sm ms-2 mt-2 mb-4 cursor-pointer rounded-sm text-white bg-blue-700">View Details</button></Link>
-              </div>
+              <Card className="pt-0 overflow-hidden" key={i}>
+                <img className="h-[170px] w-full" src={e.pic} alt={e.name} />
+                <CardHeader>
+                  <CardTitle>{e.name}</CardTitle>
+                  <CardDescription>{e.duration}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                <Link href={`/courses/${e.path}`}>
+                 <Button variant="outline" className="bg-blue-500 text-white cursor-pointer">
+                    View Details
+                  </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             );
           })}
         </div>
