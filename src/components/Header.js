@@ -52,7 +52,7 @@ export default function Header() {
     <header className=" ">
      
 
-      <nav className="max-w-7xl  sticky top-0 left-0 mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between items-center">
+      <nav className="max-w-7xl  sticky top-0  mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between items-center">
         <Link href="/">
           <h2 className="text-sm lg:text-2xl font-[MachinaR] text-blue-800 ">
             Drishti Infotech
@@ -81,12 +81,12 @@ export default function Header() {
 
             </SheetTrigger>
           </div>
-            <SheetContent className='p-5'>
+            <SheetContent className='p-4 w-[60vw]'>
              
-              <ul>
+              <ul className="mt-4 flex gap-3 flex-col">
                     {navItem.map((e, i) => {
                       return (
-                        <li className="m-2" key={i} onClick={()=>{
+                        <li  key={i} onClick={()=>{
                           setOpen(false)
                         }}>
                           <Link href={e.path}>{e.name}</Link>

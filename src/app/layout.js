@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -44,9 +45,11 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+         
           <Header />
           {children}
           <Footer />
+          
         </ThemeProvider>
       </body>
     </html>
