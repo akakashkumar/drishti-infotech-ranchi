@@ -12,6 +12,15 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ModeToggle } from "./theme-btn";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Button } from "./ui/button";
 
 export default function Header() {
   const [navItem, setNavItem] = useState([
@@ -43,7 +52,9 @@ export default function Header() {
   };
   return (
     <header className=" ">
-      <nav className="max-w-7xl  sticky top-0 left-0 mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between lg:items-center">
+     
+
+      <nav className="max-w-7xl  sticky top-0 left-0 mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between items-center">
         <Link href="/">
           <h2 className="text-sm lg:text-2xl font-[MachinaR] text-blue-800 ">
             Drishti Infotech
@@ -68,24 +79,24 @@ export default function Header() {
               <ModeToggle/>
             </div>
             <SheetTrigger>
-              <RxHamburgerMenu className="text-3xl sm:text-4xl" />
+           <RxHamburgerMenu className="text-3xl"/>
+
             </SheetTrigger>
           </div>
-            <SheetContent>
+            <SheetContent className='p-6'>
               <SheetHeader>
                 <SheetTitle>Drishti Infotech</SheetTitle>
-                <SheetDescription>
-                  <ul>
+                
+              </SheetHeader>
+              <ul>
                     {navItem.map((e, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link href={e.path}>{e.name}</Link>
                         </li>
                       );
                     })}
                   </ul>
-                </SheetDescription>
-              </SheetHeader>
             </SheetContent>
           </Sheet>
         </div>

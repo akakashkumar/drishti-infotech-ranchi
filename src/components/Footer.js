@@ -109,7 +109,7 @@ export default function Footer() {
     },
   ])
   return (
-    <div className="bg-[#1c2331]">
+    <div >
       <footer className="max-w-7xl mx-auto px-4 lg:px-5 py-5">
        <div className="grid md:grid-cols-2 gap-5 lg:grid-cols-4">
        <div>
@@ -119,7 +119,7 @@ export default function Footer() {
           <ul>
             {quickLinks.map((e, i) => {
               return (
-                <li className="text-gray-300 font-light" key={i}>
+                <li className=" font-light" key={i}>
                   <Link href={e.path}>{e.item}</Link>
                 </li>
               );
@@ -132,7 +132,7 @@ export default function Footer() {
                 {
                     courses.map((e,i)=>{
                         return(
-                            <li className="text-gray-300 font-light" key={i}><Link href={`/courses/${e.path}`}>{e.item}</Link></li>
+                            <li className=" font-light" key={i}><Link href={`/courses/${e.path}`}>{e.item}</Link></li>
                         )
                     })
                 }
@@ -142,7 +142,7 @@ export default function Footer() {
             <h2 className="text-2xl text-orange-500 font-medium">Contact Us</h2>
             <ul className="">
                 {contactDetail.map((e,i)=>{
-                  return(<li className="text-gray-300 font-light flex items-center gap-1" key={i}>{e.icon}
+                  return(<li className=" font-light flex items-center gap-1" key={i}>{e.icon}
                   <p>{e.item}</p>
                   </li>)
                 })}
@@ -150,7 +150,7 @@ export default function Footer() {
         </div>
         <div>
             <h2 className="text-2xl text-orange-500 font-medium">Social Media Links</h2>
-            <ul className="text-gray-300 font-light  mt-3  ">
+            <ul className=" font-light  mt-3  ">
                 {socialLinks.map((e,i)=>{
                   return(
                     <li className="flex items-center gap-1 text-xl" key={i}>{e.icon}<Link href={e.path}>{e.item}</Link></li>
