@@ -105,7 +105,7 @@ export default function AllCourses() {
                 </CardHeader>
                 <CardContent>
                 <Link href={`/courses/${e.path}`}>
-                 <Button variant="outline" className="bg-blue-500 text-white cursor-pointer">
+                 <Button variant="default" className=" cursor-pointer">
                     View Details
                   </Button>
                   </Link>
