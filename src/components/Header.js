@@ -70,8 +70,8 @@ export default function Header() {
               </li>
             );
           })}
-          <li className="hidden lg:block">
-            <ModeToggle />
+          <li className="hidden lg:block ">
+            <ModeToggle/>
           </li>
         </ul>
         <div className="lg:hidden">

@@ -89,7 +89,7 @@ export default function Footer() {
   } ,
   {
     icon: <FaLocationDot />,
-    item: 'Tilta Chock, Kamre Ranchi Jharkhand-835222'
+    item: 'Tilta Chowk, Kamre Ranchi Jharkhand-835222'
   } ])
   const [socialLinks, setSocialLinks] = useState([
     {

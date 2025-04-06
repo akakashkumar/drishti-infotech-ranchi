@@ -98,7 +98,7 @@ export default function About() {
   return (
     <div>
       <div className="">
-        <img className="w-full" src="banner.webp" alt="banner" />
+        <img className="w-full rounded" src="banner.webp" alt="banner" />
         <div className="py-5">
           <div className="lg:flex items-center gap-5">
             <div className="lg:w-1/2">
