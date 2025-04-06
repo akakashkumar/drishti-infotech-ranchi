@@ -15,14 +15,8 @@
     font-family: "MachinaR";
     src: url('../../public/NeueMachina-Regular_DQCmjH1st.ttf');
 }
-@font-face {
-    font-family: "MachinaL";
-    src: url('../../public/NeueMachina-Light_gwWCZxVuQl.ttf');
-}
-@font-face {
-    font-family: "MachinaB";
-    src: url('../../public/NeueMachina-Bold_WaMOsLX9Z9.ttf');
-}
+
+
 
 :root {
     --radius: 0.625rem;
