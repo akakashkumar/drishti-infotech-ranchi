@@ -19,8 +19,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [navItem, setNavItem] = useState([
@@ -47,16 +48,19 @@ export default function Header() {
     },
   ]);
   const [open, setOpen] = useState(false);
- 
+
   return (
     <header className=" ">
-     
-
       <nav className="max-w-7xl  sticky top-0  mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between items-center">
         <Link href="/">
-          <h2 className="text-sm lg:text-2xl font-[MachinaR] text-blue-800 ">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: .2 }}
+            className="text-sm lg:text-2xl font-[MachinaR] text-blue-800 "
+          >
             Drishti Infotech
-          </h2>
+          </motion.h2>
         </Link>
         <ul className="flex gap-7 items-center">
           {navItem.map((e, i) => {
@@ -72,28 +76,29 @@ export default function Header() {
         </ul>
         <div className="lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
-          <div className="flex gap-4 items-center">
-          <div className="lg:hidden">
-              <ModeToggle/>
+            <div className="flex gap-4 items-center">
+              <div className="lg:hidden">
+                <ModeToggle />
+              </div>
+              <SheetTrigger>
+                <RxHamburgerMenu className="text-3xl" />
+              </SheetTrigger>
             </div>
-            <SheetTrigger>
-           <RxHamburgerMenu className="text-3xl"/>
-
-            </SheetTrigger>
-          </div>
-            <SheetContent className='p-4 w-[60vw]'>
-             
+            <SheetContent className="p-4 w-[60vw]">
               <ul className="mt-4 flex gap-3 flex-col">
-                    {navItem.map((e, i) => {
-                      return (
-                        <li  key={i} onClick={()=>{
-                          setOpen(false)
-                        }}>
-                          <Link href={e.path}>{e.name}</Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                {navItem.map((e, i) => {
+                  return (
+                    <li
+                      key={i}
+                      onClick={() => {
+                        setOpen(false);
+                      }}
+                    >
+                      <Link href={e.path}>{e.name}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
             </SheetContent>
           </Sheet>
         </div>

@@ -20,7 +20,7 @@ const HeroSection = () => {
     "https://imgs.search.brave.com/hT6WWYFsRF2mZw0BaKtonh1a2iIM_qc0_qmsRmDek_M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y3JlYXRpdmVpdGlu/c3RpdHV0ZS5jb20v/aW1hZ2VzL2NvdXJz/ZS9jb3Vyc2VfMTY2/ODQ4ODA2Ni5qcGc",
   ]);
   return (
-    <div className="w-[100%] h-[35vh] sm:h-[50vh] md:h-[55vh] lg:h-[85vh] 2xl:h-[500px] mx-auto pb-10">
+    <div className="w-[100%] h-[35vh] sm:h-[50vh] md:h-[55vh] lg:h-[500px]  mx-auto pb-10">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
