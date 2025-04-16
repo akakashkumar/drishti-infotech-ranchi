@@ -8,6 +8,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
+ 
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 import { Button } from "./ui/button";
 
@@ -88,16 +99,46 @@ export default function AllCourses() {
       path: "web-development",
     },
   ]);
+   const [sliderPics, setSliderPics] = React.useState([
+      "c-slider-1.jpg",
+      "c-slider-2.jpg",
+      "c-slider-3.jpg",
+      "c-slider-4.jpg",
+      "c-slider-5.jpg",
+      
+    ]);
   return (
     <div>
-      <div className="container mx-auto px-4 py-5 lg:px-5">
+      <div className="max-w-7xl mx-auto px-4 py-5 lg:px-5">
+      <div className="  mx-auto pb-10">
+      <Carousel
+      plugins={[Autoplay({delay: 2000})]}
+      className="w-full ">
+        <CarouselContent>
+          {sliderPics.map((pic, i) => {
+            return (
+              <CarouselItem key={i} >
+                <div>
+                  <Card className='p-0'>
+                    <CardContent className="p-0 ">
+                      <img className="w-full rounded h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px]" src={pic} alt="" />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        
+      </Carousel>
+    </div>
         <h2 className="text-3xl font-[MachinaR] font-medium mb-4 mt-4 text-orange-500">
           Our All Courses
         </h2>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">
           {allCourses.map((e, i) => {
             return (
-              <Card className="pt-0 overflow-hidden" key={i}>
+              <Card className="pt-0 overflow-hidden " key={i}>
                 <img className="h-[170px] w-full" src={e.pic} alt={e.name} />
                 <CardHeader>
                   <CardTitle>{e.name}</CardTitle>

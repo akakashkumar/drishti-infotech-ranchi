@@ -7,6 +7,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
+ 
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function About() {
   const [coreFocus, setCoreFocus] = useState([
@@ -95,10 +106,39 @@ export default function About() {
       des: "Learning how computers work and how to use  software can improve logical thinking and problem-solving abilities.",
     },
   ]);
+    const [sliderPics, setSliderPics] = React.useState([
+      "a-1.jpg",
+      "a-2.jpg",
+      "a-3.jpg",
+      "a-4.jpg",
+      "a-5.jpg",
+      
+    ]);
   return (
     <div>
       <div className="">
-        <img className="w-full rounded" src="banner.webp" alt="banner" />
+      <div className="  mx-auto pb-10">
+      <Carousel
+      plugins={[Autoplay({delay: 2000})]}
+      className="w-full ">
+        <CarouselContent>
+          {sliderPics.map((pic, i) => {
+            return (
+              <CarouselItem key={i} >
+                <div>
+                  <Card className='p-0'>
+                    <CardContent className="p-0 ">
+                      <img className="w-full rounded h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px]" src={pic} alt="" />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        
+      </Carousel>
+    </div>
         <div className="py-5">
           <div className="lg:flex items-center gap-5">
             <div className="lg:w-1/2">
@@ -106,14 +146,11 @@ export default function About() {
                 About Drishti Infotech
               </h1>
               <p className="my-2 text-xl text-center lg:text-left">
-                In Ranchi, Jharkhand, where opportunities in the IT and related
-                sectors are growing, computer coaching centers play a crucial
-                role in empowering the local population with the skills needed
-                to participate in and benefit from the digital economy. They
-                cater to a diverse range of individuals, from students seeking
-                foundational knowledge to professionals looking to upskill or
-                change careers.
+              <span className="font-medium">Drishti Infotech</span> is a trusted name in education. Our goal is to make learning easy and available for everyone.
+
+We are well-known in the city for helping students grow through computer training and useful vocational courses. Many of our students have gone on to build successful careers, and we are proud to be part of their journey.
               </p>
+              <p className="my-2 text-xl text-center lg:text-left">At Drishti Infotech, we believe in shaping young minds, spreading knowledge, and helping build a digitally smart India.</p>
             </div>
             <div className="lg:w-1/2">
               <img
@@ -129,7 +166,7 @@ export default function About() {
             {coreFocus.map((e, i) => {
               return (
                
-                  <Card key={i}>
+                  <Card key={i} className='hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200'>
                     <CardHeader>
                       <CardTitle >{e.title}</CardTitle>
                       <CardDescription>{e.des}</CardDescription>
@@ -147,7 +184,7 @@ export default function About() {
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {commonOffering.map((e, i) => {
               return (
-                <Card key={i}>
+                <Card key={i} className='hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200'>
                 <CardHeader>
                   <CardTitle >{e.title}</CardTitle>
                   <CardDescription>{e.des}</CardDescription>
@@ -164,7 +201,7 @@ export default function About() {
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {benefits.map((e, i) => {
               return (
-                <Card key={i}>
+                <Card key={i} className='hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200'>
                 <CardHeader>
                   <CardTitle >{e.title}</CardTitle>
                   <CardDescription>{e.des}</CardDescription>

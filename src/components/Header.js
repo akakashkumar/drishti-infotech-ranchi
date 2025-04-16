@@ -51,13 +51,14 @@ export default function Header() {
 
   return (
     <header className=" ">
-      <nav className="max-w-7xl  sticky top-0  mx-auto px-4 lg:px-5 py-2 pt-5 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto p-7 relative">
+      <nav className="w-full  fixed top-0 right-0 left-0 z-10 backdrop-blur-sm bg-white/30 dark:bg-black/30  px-4 lg:px-5 xl:px-7 2xl:px-96 py-2 pt-5 flex justify-between items-center">
         <Link href="/">
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: .2 }}
-            className="text-sm lg:text-2xl font-[MachinaR] text-blue-800 "
+            className="text-sm lg:text-2xl font-[MachinaR] text-blue-600 "
           >
             Drishti Infotech
           </motion.h2>
@@ -103,6 +104,7 @@ export default function Header() {
           </Sheet>
         </div>
       </nav>
+      </div>
     </header>
   );
 }
