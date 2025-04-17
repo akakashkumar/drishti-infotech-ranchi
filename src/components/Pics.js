@@ -1,18 +1,9 @@
 import { useState } from "react"
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
- 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+
+import Sliders from '@/components/Sliders'
 
 export default function Gallery(){
-      const [sliderPics, setSliderPics] = React.useState([
+      const [sliderPics, setSliderPics] = useState([
         "ig-1.jpg",
         "ig-2.jpg",
         "ig-3.jpg",
@@ -22,28 +13,7 @@ export default function Gallery(){
     const [pics, setPics] = useState(['banner1.jpg','banner.webp','holi.webp','neon-flame.webp','c.jpg','dca.jpg','dtp.jpg','tally.jpg','adca.jpg','graphic-designing.jpg','hi-en-typing.jpg','video-editing.jpg'])
     return(
         <section >
-            <div className="  mx-auto pb-10">
-                  <Carousel
-                  plugins={[Autoplay({delay: 2000})]}
-                  className="w-full ">
-                    <CarouselContent>
-                      {sliderPics.map((pic, i) => {
-                        return (
-                          <CarouselItem key={i} >
-                            <div>
-                              <Card className='p-0'>
-                                <CardContent className="p-0 ">
-                                  <img className="w-full rounded h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px]" src={pic} alt="" />
-                                </CardContent>
-                              </Card>
-                            </div>
-                          </CarouselItem>
-                        );
-                      })}
-                    </CarouselContent>
-                    
-                  </Carousel>
-                </div>
+            <Sliders pics={sliderPics}/>
             <h2 className="text-xl text-orange-500  tracking-tight sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-5 text-center lg:text-left font-[MachinaR]">Gallery</h2>
             <div className=" grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 {pics.map((e, i)=>{
