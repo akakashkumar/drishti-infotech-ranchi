@@ -107,7 +107,7 @@ export default function AllCourses() {
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">
           {allCourses.map((e, i) => {
             return (
-              <Card className="pt-0 overflow-hidden " key={i}>
+              <Card className="pt-0 overflow-hidden hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200" key={i}>
                 <img className="h-[170px] w-full" src={e.pic} alt={e.name} />
                 <CardHeader>
                   <CardTitle>{e.name}</CardTitle>
