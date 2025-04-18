@@ -153,7 +153,7 @@ export default function Footer() {
             <ul className=" font-light  mt-3  ">
                 {socialLinks.map((e,i)=>{
                   return(
-                    <li className="flex items-center gap-1 text-slate-700 dark:text-slate-400 text-xl" key={i}>{e.icon}<Link href={e.path}>{e.item}</Link></li>
+                    <li className="flex items-center gap-1 text-slate-700 dark:text-slate-400 text-xl" key={i}>{e.icon}<Link href={e.path} target="_blank" >{e.item}</Link></li>
                   )
                 })}
               
