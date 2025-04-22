@@ -21,7 +21,7 @@ export default function Home() {
         <HeroSection />
         <div className="lg:flex  lg:flex-row  items-center ">
           <div className="lg:w-1/2  ">
-            <h2 className="text-center text-2xl lg:text-5xl font-[MachinaL] text-orange-600">
+            <h2 className="text-center text-2xl lg:text-5xl font-sans text-orange-600">
               Empower Your Future <br /> with Tech Skills.
             </h2>
             <p className="text-xl my-3">

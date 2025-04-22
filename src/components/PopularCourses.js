@@ -67,7 +67,7 @@ export default function PopularCourses() {
           Popular Courses
         </h2>
         <Link href="/courses">
-          <button className="text-2xl text-blue-600 cursor-pointer underline font-[MachinaR] mb-5">
+          <button className="text-2xl text-blue-600 cursor-pointer underline font-sans mb-5">
             Explore your Courses
           </button>
         </Link>

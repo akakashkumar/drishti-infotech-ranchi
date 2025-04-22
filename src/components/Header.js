@@ -58,7 +58,7 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: .2 }}
-            className="text-sm lg:text-2xl font-[MachinaR] text-blue-600 "
+            className="text-sm lg:text-2xl font-sans text-blue-600 "
           >
             Drishti Infotech
           </motion.h2>
@@ -66,7 +66,7 @@ export default function Header() {
         <ul className="flex gap-7 items-center">
           {navItem.map((e, i) => {
             return (
-              <li className="hidden lg:block text-lg" key={i}>
+              <li className="hidden lg:block text-xl font-sans" key={i}>
                 <Link href={e.path}>{e.name}</Link>
               </li>
             );
@@ -95,7 +95,7 @@ export default function Header() {
                         setOpen(false);
                       }}
                     >
-                      <Link href={e.path}>{e.name}</Link>
+                      <Link className="text-xl font-sans" href={e.path}>{e.name}</Link>
                     </li>
                   );
                 })}

@@ -101,7 +101,7 @@ export default function AllCourses() {
     <div>
       <div className="max-w-7xl mx-auto px-4 py-5 lg:px-5">
       <Sliders pics = {sliderPics}/>
-        <h2 className="text-3xl font-[MachinaR] font-medium mb-4 mt-4 text-orange-500">
+        <h2 className="text-3xl font-sans font-medium mb-4 mt-4 text-orange-500">
           Our All Courses
         </h2>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">

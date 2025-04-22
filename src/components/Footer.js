@@ -95,12 +95,12 @@ export default function Footer() {
     {
       item: 'Instagram',
       icon: <FaInstagram/>,
-      path: 'https://www.instagram.com/akashkumarmahto2006/'
+      path: '#'
     },
     {
       item: 'Facebook',
       icon: <FaFacebook/>,
-      path: 'https://www.facebook.com/profile.php?id=100068773404021'
+      path: '#'
     },
     {
       item: 'Youtube',

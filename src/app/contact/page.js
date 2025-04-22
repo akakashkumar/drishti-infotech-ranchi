@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Sliders from "@/components/Sliders";
+import ContactForm from "@/components/ContactForm";
+import LocationMap from "@/components/LocationMap";
 
 const page = () => {
      const [sliderPics, setSliderPics] = useState([
@@ -14,6 +16,8 @@ const page = () => {
   return (
     <div className='max-w-7xl mx-auto p-5'>
         <Sliders pics={sliderPics} />
+        <ContactForm/>
+        <LocationMap/>
     </div>
   )
 }

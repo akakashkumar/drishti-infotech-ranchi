@@ -112,7 +112,7 @@ export default function About() {
         <div className="py-5">
           <div className="lg:flex items-center gap-5">
             <div className="lg:w-1/2">
-              <h1 className="text-3xl text-orange-500 font-[MachinaR] text-center lg:text-left uppercase font-[MachinaR]">
+              <h1 className="text-3xl text-orange-500 font-sans text-center lg:text-left uppercase font-[MachinaR]">
                 About Drishti Infotech
               </h1>
               <p className="my-2 text-xl text-center lg:text-left">

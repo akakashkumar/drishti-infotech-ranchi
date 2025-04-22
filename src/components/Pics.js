@@ -14,7 +14,7 @@ export default function Gallery(){
     return(
         <section >
             <Sliders pics={sliderPics}/>
-            <h2 className="text-xl text-orange-500  tracking-tight sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-5 text-center lg:text-left font-[MachinaR]">Gallery</h2>
+            <h2 className="text-xl text-orange-500  tracking-tight sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-5 text-center lg:text-left font-sans">Gallery</h2>
             <div className=" grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 {pics.map((e, i)=>{
                     return(

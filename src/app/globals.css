@@ -7,14 +7,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-@font-face {
-    font-family: "fontspring";
-    src: url('../../public/Fontspring-DEMO-juana-extralightit_toKzXEsfr.ttf');
-}
-@font-face {
-    font-family: "MachinaR";
-    src: url('../../public/NeueMachina-Regular_DQCmjH1st.ttf');
-}
+
 
 
 
