@@ -8,7 +8,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import Sliders from '@/components/Sliders'
+import Sliders from "@/components/Sliders";
+import {motion} from 'framer-motion'
 
 export default function About() {
   const [coreFocus, setCoreFocus] = useState([
@@ -97,33 +98,48 @@ export default function About() {
       des: "Learning how computers work and how to use  software can improve logical thinking and problem-solving abilities.",
     },
   ]);
-    const [sliderPics, setSliderPics] = useState([
-      "a-1.jpg",
-      "a-2.jpg",
-      "a-3.jpg",
-      "a-4.jpg",
-      "a-5.jpg",
-      
-    ]);
+  const [sliderPics, setSliderPics] = useState([
+    "a-1.jpg",
+    "a-2.jpg",
+    "a-3.jpg",
+    "a-4.jpg",
+    "a-5.jpg",
+  ]);
   return (
     <div>
       <div className="">
-     <Sliders pics= {sliderPics}/>
+        <Sliders pics={sliderPics} />
         <div className="py-5">
           <div className="lg:flex items-center gap-5">
-            <div className="lg:w-1/2">
-              <h1 className="text-3xl text-orange-500 font-sans text-center lg:text-left uppercase font-[MachinaR]">
+            <motion.div
+            initial={{opacity:0, scale:0}}
+            whileInView={{opacity:1, scale:1}}
+            viewport={{once:true, amount:0.8}}
+            transition={{duration:0.8}}
+            className="lg:w-1/2">
+              <h2 className="text-3xl text-orange-500 font-sans text-center lg:text-left uppercase font-[MachinaR]">
                 About Drishti Infotech
-              </h1>
+              </h2>
               <p className="my-2 text-xl text-center lg:text-left">
-              <span className="font-medium">Drishti Infotech</span> is a trusted name in education. Our goal is to make learning easy and available for everyone.
-
-We are well-known in the city for helping students grow through computer training and useful vocational courses. Many of our students have gone on to build successful careers, and we are proud to be part of their journey.
+                <span className="font-medium">Drishti Infotech</span> is a
+                trusted name in education. Our goal is to make learning easy and
+                available for everyone. We are well-known in the city for
+                helping students grow through computer training and useful
+                vocational courses. Many of our students have gone on to build
+                successful careers, and we are proud to be part of their
+                journey.
               </p>
-              <p className="my-2 text-xl text-center lg:text-left">At Drishti Infotech, we believe in shaping young minds, spreading knowledge, and helping build a digitally smart India.</p>
-            </div>
+              <p className="my-2 text-xl text-center lg:text-left">
+                At Drishti Infotech, we believe in shaping young minds,
+                spreading knowledge, and helping build a digitally smart India.
+              </p>
+            </motion.div>
             <div className="lg:w-1/2">
-              <img
+              <motion.img
+              initial={{opacity:0, scale:0}}
+              whileInView={{opacity:1, scale:1}}
+              viewport={{once:true, amount:0.8}}
+              transition={{duration:0.8}}
                 className="w-full rounded"
                 src="banner.webp"
                 alt="about banner"
@@ -135,15 +151,22 @@ We are well-known in the city for helping students grow through computer trainin
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4">
             {coreFocus.map((e, i) => {
               return (
-               
-                  <Card key={i} className='hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200'>
-                    <CardHeader>
-                      <CardTitle >{e.title}</CardTitle>
-                      <CardDescription>{e.des}</CardDescription>
-                    </CardHeader>
-                   
-                  </Card>
-                
+                <motion.div 
+                initial={{opacity:0, scale:0}}
+                whileInView={{opacity:1, scale:1}}
+                viewport={{once:true, amount:0.8}}
+                transition={{duration:0.8}}
+                key={i}>
+                  <Card
+                  
+                  className="hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200"
+                >
+                  <CardHeader>
+                    <CardTitle>{e.title}</CardTitle>
+                    <CardDescription>{e.des}</CardDescription>
+                  </CardHeader>
+                </Card>
+                </motion.div>
               );
             })}
           </div>
@@ -154,13 +177,23 @@ We are well-known in the city for helping students grow through computer trainin
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {commonOffering.map((e, i) => {
               return (
-                <Card key={i} className='hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200'>
-                <CardHeader>
-                  <CardTitle >{e.title}</CardTitle>
-                  <CardDescription>{e.des}</CardDescription>
-                </CardHeader>
-               
-              </Card>
+               <motion.div
+               initial={{opacity:0, scale:0}}
+                whileInView={{opacity:1, scale:1}}
+                viewport={{once:true, amount:0.8}}
+                transition={{duration:0.8}}
+               key={i}
+               >
+                 <Card
+                 
+                  className="hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200"
+                >
+                  <CardHeader>
+                    <CardTitle>{e.title}</CardTitle>
+                    <CardDescription>{e.des}</CardDescription>
+                  </CardHeader>
+                </Card>
+               </motion.div>
               );
             })}
           </div>
@@ -171,13 +204,23 @@ We are well-known in the city for helping students grow through computer trainin
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {benefits.map((e, i) => {
               return (
-                <Card key={i} className='hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200'>
-                <CardHeader>
-                  <CardTitle >{e.title}</CardTitle>
-                  <CardDescription>{e.des}</CardDescription>
-                </CardHeader>
-               
-              </Card>
+               <motion.div
+               initial={{opacity:0, scale:0}}
+               whileInView={{opacity:1, scale:1}}
+               viewport={{once:true, amount:0.8}}
+               transition={{duration:0.8}}
+               key={i}
+               >
+                 <Card
+                  
+                  className="hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200"
+                >
+                  <CardHeader>
+                    <CardTitle>{e.title}</CardTitle>
+                    <CardDescription>{e.des}</CardDescription>
+                  </CardHeader>
+                </Card>
+               </motion.div>
               );
             })}
           </div>

@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 import Sliders from '@/components/Sliders'
+import { motion } from 'framer-motion'
 
 export default function Gallery(){
       const [sliderPics, setSliderPics] = useState([
@@ -18,7 +19,12 @@ export default function Gallery(){
             <div className=" grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 {pics.map((e, i)=>{
                     return(
-                        <img className=" rounded hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200" key={i} src={e} alt="" />
+                        <motion.img 
+                        initial= {{opacity:0, scale:0}}
+                        whileInView={{opacity:1, scale:1}}
+                        viewport={{amount:0.8, once: true}}
+                        transition={{duration: 0.8}}
+                        className=" rounded hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200" key={i} src={e} alt="" />
                     )
                 })}
             </div>

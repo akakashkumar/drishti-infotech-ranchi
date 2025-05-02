@@ -9,8 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-
+import {motion} from 'framer-motion'
 
 export default function PopularCourses() {
   const [courseCard, setCourseCard] = useState([
@@ -74,20 +73,33 @@ export default function PopularCourses() {
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5  ">
           {courseCard.map((e, i) => {
             return (
-              <Card className="pt-0 overflow-hidden hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200" key={i}>
-                <img className="h-[170px] w-full" src={e.pic} alt={e.name} />
-                <CardHeader>
-                  <CardTitle>{e.name}</CardTitle>
-                  <CardDescription>{e.duration}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                <Link href={`/courses/${e.path}`}>
-                 <Button variant="default" className=" cursor-pointer">
-                    View Details
-                  </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+              <motion.div initial={{
+                opacity: 0,
+                scale:0,
+               
+              }}
+              whileInView={{opacity: 1,  scale:1}}
+              transition={{duration: 0.8}}
+              viewport={{amount: 0.8, once: true}}
+              key={i}>
+                <Card
+                  className="pt-0 overflow-hidden hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200"
+                  
+                >
+                  <img className="h-[170px] w-full" src={e.pic} alt={e.name} />
+                  <CardHeader>
+                    <CardTitle>{e.name}</CardTitle>
+                    <CardDescription>{e.duration}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link href={`/courses/${e.path}`}>
+                      <Button variant="default" className=" cursor-pointer">
+                        View Details
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </motion.div>
             );
           })}
         </div>

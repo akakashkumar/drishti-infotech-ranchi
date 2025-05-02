@@ -15,6 +15,7 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [contactDetail, setContactDetail] = useState([
@@ -57,18 +58,32 @@ const ContactForm = () => {
         <div className=" w-full lg:w-1/2 flex flex-col gap-5">
           {contactDetail.map((item, index) => {
             return (
-              <Card key={index}>
-                <CardHeader className="flex flex-col items-center ">
-                  <CardTitle className="text-5xl">{item.icon}</CardTitle>
-                  <CardDescription className="text-2xl text-center">
-                    {item.item}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                transition={{ duration: 0.8 }}
+                key={index}
+              >
+                <Card>
+                  <CardHeader className="flex flex-col items-center ">
+                    <CardTitle className="text-5xl">{item.icon}</CardTitle>
+                    <CardDescription className="text-2xl text-center">
+                      {item.item}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </motion.div>
             );
           })}
         </div>
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.8 }}
+          className="w-full lg:w-1/2"
+        >
           <Card>
             <CardHeader>
               <CardTitle>
@@ -108,7 +123,7 @@ const ContactForm = () => {
               </form>
             </CardContent>
           </Card>
-        </div>
+        </motion.div>
       </section>
       <div className="w-full py-5">
         <h2 className="text-2xl lg:text-4xl xl:text-5xl mb-4 mt-6 font-extralight font-sans">
@@ -117,9 +132,19 @@ const ContactForm = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {socialLinks.map((item, index) => {
             return (
-              <Card key={index}>
-                <CardHeader >
-                  <Link className="flex flex-col items-center gap-2" href={item.path} target="_blank">
+             <motion.div
+             initial={{opacity:0, scale:0}}
+             whileInView={{opacity:1, scale:1}}
+             viewport={{once:true, amount:0.8}}
+            transition={{duration: 0.8}}
+             key={index}>
+               <Card >
+                <CardHeader>
+                  <Link
+                    className="flex flex-col items-center gap-2"
+                    href={item.path}
+                    target="_blank"
+                  >
                     <CardTitle className="text-5xl">{item.icon}</CardTitle>
                     <CardDescription className="text-2xl text-center hover:text-blue-700 text-blue-600 underline">
                       {item.item}
@@ -127,6 +152,7 @@ const ContactForm = () => {
                   </Link>
                 </CardHeader>
               </Card>
+             </motion.div>
             );
           })}
         </div>
