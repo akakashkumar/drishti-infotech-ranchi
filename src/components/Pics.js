@@ -20,10 +20,10 @@ export default function Gallery(){
                 {pics.map((e, i)=>{
                     return(
                         <motion.img 
-                        initial= {{opacity:0, scale:0}}
-                        whileInView={{opacity:1, scale:1}}
+                        initial= {{opacity:0, y:20}}
+                        whileInView={{opacity:1, y:0}}
                         viewport={{amount:0.8, once: true}}
-                        transition={{duration: 0.8}}
+                        transition={{duration: 0.8, ease:'easeIn'}}
                         className=" rounded hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200" key={i} src={e} alt="" />
                     )
                 })}

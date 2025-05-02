@@ -108,10 +108,10 @@ export default function AllCourses() {
           {allCourses.map((e, i) => {
             return (
               <motion.div
-              initial={{opacity: 0, scale:0,}}
-              whileInView={{opacity:1, scale: 1}}
+              initial={{opacity: 0, y:20,}}
+              whileInView={{opacity:1, y:0}}
               viewport={{amount: 0.8, once: true}}
-              transition={{duration:0.8}}
+              transition={{duration:0.8, ease:'easeIn'}}
               key={i}>
                 <Card
                   className="pt-0 overflow-hidden hover:translate-y-[-8px] transition-all hover:shadow-slate-900 dark:hover:shadow-slate-200"

@@ -27,7 +27,7 @@ export default function Home() {
            initial={{opacity:0, scale:0}}
            whileInView={{opacity:1, scale:1}}
            viewport={{once:true, amount:0.8}}
-           transition={{duration:0.8}}
+           transition={{duration:0.8, ease:"easeIn"}}
           className="lg:w-1/2  ">
             <h2 className="text-center text-2xl lg:text-5xl font-sans text-orange-600">
               Empower Your Future <br /> with Tech Skills.

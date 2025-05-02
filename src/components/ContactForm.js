@@ -59,10 +59,10 @@ const ContactForm = () => {
           {contactDetail.map((item, index) => {
             return (
               <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y:20 }}
+                whileInView={{ opacity: 1, y:0 }}
                 viewport={{ once: true, amount: 0.8 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.8, ease:'easeIn' }}
                 key={index}
               >
                 <Card>
@@ -81,7 +81,7 @@ const ContactForm = () => {
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease:'easeIn' }}
           className="w-full lg:w-1/2"
         >
           <Card>
@@ -133,10 +133,10 @@ const ContactForm = () => {
           {socialLinks.map((item, index) => {
             return (
              <motion.div
-             initial={{opacity:0, scale:0}}
-             whileInView={{opacity:1, scale:1}}
+             initial={{opacity:0, y:20}}
+             whileInView={{opacity:1, y:0}}
              viewport={{once:true, amount:0.8}}
-            transition={{duration: 0.8}}
+            transition={{duration: 0.8, ease:'easeIn'}}
              key={index}>
                <Card >
                 <CardHeader>

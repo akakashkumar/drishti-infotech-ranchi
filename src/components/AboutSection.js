@@ -115,7 +115,7 @@ export default function About() {
             initial={{opacity:0, scale:0}}
             whileInView={{opacity:1, scale:1}}
             viewport={{once:true, amount:0.8}}
-            transition={{duration:0.8}}
+            transition={{duration:0.8, ease:'easeIn'}}
             className="lg:w-1/2">
               <h2 className="text-3xl text-orange-500 font-sans text-center lg:text-left uppercase font-[MachinaR]">
                 About Drishti Infotech
@@ -139,7 +139,7 @@ export default function About() {
               initial={{opacity:0, scale:0}}
               whileInView={{opacity:1, scale:1}}
               viewport={{once:true, amount:0.8}}
-              transition={{duration:0.8}}
+              transition={{duration:0.8, ease:'easeIn'}}
                 className="w-full rounded"
                 src="banner.webp"
                 alt="about banner"
@@ -152,10 +152,10 @@ export default function About() {
             {coreFocus.map((e, i) => {
               return (
                 <motion.div 
-                initial={{opacity:0, scale:0}}
-                whileInView={{opacity:1, scale:1}}
+                initial={{opacity:0, y:20}}
+                whileInView={{opacity:1, y:0}}
                 viewport={{once:true, amount:0.8}}
-                transition={{duration:0.8}}
+                transition={{duration:0.8, ease:'easeIn'}}
                 key={i}>
                   <Card
                   
@@ -178,10 +178,10 @@ export default function About() {
             {commonOffering.map((e, i) => {
               return (
                <motion.div
-               initial={{opacity:0, scale:0}}
-                whileInView={{opacity:1, scale:1}}
+               initial={{opacity:0, y:20}}
+                whileInView={{opacity:1, y:0}}
                 viewport={{once:true, amount:0.8}}
-                transition={{duration:0.8}}
+                transition={{duration:0.8, ease:'easeIn'}}
                key={i}
                >
                  <Card
@@ -205,10 +205,10 @@ export default function About() {
             {benefits.map((e, i) => {
               return (
                <motion.div
-               initial={{opacity:0, scale:0}}
-               whileInView={{opacity:1, scale:1}}
+               initial={{opacity:0, y:20}}
+               whileInView={{opacity:1, y:0}}
                viewport={{once:true, amount:0.8}}
-               transition={{duration:0.8}}
+               transition={{duration:0.8, ease:'easeIn'}}
                key={i}
                >
                  <Card
